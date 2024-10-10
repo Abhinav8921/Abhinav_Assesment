@@ -74,7 +74,7 @@ Quaternion mul(Quaternion q1,Quaternion q2)
 {
     double dotproduct = dot(q1.v,q2.v);
     vector crosspro = cross(q1.v,q2.v);
-    double scalar = q1.scalar * q2.scalar - dotproduct;
+    double scalar = q1.scalar * q2.scalar - dotproduct;  //obtaining the scalar part
     vector v_new = create_v(q1.scalar * q2.v.i + q2.scalar*q1.v.i + crosspro.i,
 	    q1.scalar * q2.v.j + q2.scalar * q1.v.j + crosspro.j,
 	    q1.scalar * q2.v.k + q2.scalar * q1.v.k + crosspro.k);
